@@ -117,26 +117,56 @@ printf("PontosTuristicos: Carta %d venceu (%d)\n)", NumerosdePontosTuristicos1 >
 printf("DensidadePopulacional: Carta %d venceu (%d)\n", DensidadePopulacional1 < DensidadePopulacional2 ? 1 : 2, DensidadePopulacional1 < DensidadePopulacional2);
 printf("PIB per Capita: Carta %d venceu (%d)\n", PIBperCapita1 > PIBperCapita2 ? 1 : 2, PIBperCapita1 > PIBperCapita2);
 printf("Super Poder: Carta %d venceu (%d)\n", SuperPoder1 > SuperPoder2 ? 1 : 2, SuperPoder1 > SuperPoder2);
+AS CARTAS
 
 
+    // Menu de comparação das cartas
+    printf("\n===  MENU DE COMPARAÇÃO ===\n");
+    printf("1 - Populacao\n");
+    printf("2 - Area\n");
+    printf("3 - PIB\n");
+    printf()"4 - Pontos turisticos\n");
+    printf("5 - Densidade demografica\n");
+    printf("Escolha um tributo: ");
+    scanf("%d", &opcao);
 
-    // Comparação de Cartas: POPULAÇÃO
+    switch (opcao) {
+
+    case 1: 
+      printf("\n=== COMPARAÇÃO DAS CARTAS ===\n");
+      printf("Atributo escolhido: Populacao\n\n");
+
+      printf("Carta 1 - %s: %lu habitantes\n", NomedaCidade1, Populacao1);
+      printf("Carta 2 - %s: %lu habitantes\n", NomedaCidade2);
+
+      if (Populacao1 > Populacao2)
+      printf("%s venceu!\n", NomedaCidade1);
+    } else if ( Populacao2 > Populacao1) {
+      printf("%s venceu!\n", NomedaCidade2);
+    } else {
+      printf(" Empate!\n");
+    }
+    break;
+
+    case 2;
     printf("\n=== COMPARAÇÃO DAS CARTAS ===\n");
-    printf("Atributo escolhido: Populacao\n\n");
+    printf("Atributo escolhido: Area\n\n");
+    
+    printf("Carta 1 - %s: %.2f km²\n", NomedaCidade1, Area1);
+    printf("carta 2 - %s: %.2f km²\n", NomedaCidade2, Area2); 
 
-    printf("Carta 1 - %s: %d habitantes\n", NomedaCidade1, Populacao1);
-    printf("carta 2 - %s: %d habitantes\n", NomedaCidade2, Populacao2); 
+      if (Area1 > Area2 {
+      printf("%s venceu!\n", NomedaCidade1);
+    } else if (Area2 > Area1) {
+      printf("%s venceu!\n", NomedaCidade2);
+    } else {
+      printf("Empate!\n");
+    }
+    break;
 
+  
 
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-     if (Populacao1 > Populacao2) {
-         printf("NomedaCidade 1 tem maior população. VENCEU!.\n");
-     } else if (Populacao2 > Populacao1)  {
-         printf("NomedaCidade 2 tem maior população. VENCEU!.\n");
-     } else {
-        printf("Resultado: EMPATE!\n");
-
+    
 
    
  return 0; }
